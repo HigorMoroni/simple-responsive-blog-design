@@ -8,37 +8,24 @@
   <title>Simple Responsive Blog Design</title>
 </head>
 <body>
-  <header>
-    <h1>Kang Tutor</h1>
-    <nav>
-      <ul>
-        <li>Beranda</li>
-        <li>Tutorial</li>
-        <li>Pemrograman</li>
-        <li>Teknologi</li>
-        <li><img src="images/icons/search.svg" alt="Search"></li>
-      </ul>
-    </nav>
+  <header class="blog__header">
+    <div class="blog__container">
+      <nav class="header__navbar">
+        <h1>Kang Tutor</h1>
+        <ul>
+          <li>Beranda</li>
+          <li>Tutorial</li>
+          <li>Pemrograman</li>
+          <li>Teknologi</li>
+          <li><img src="images/icons/search.svg" alt="Search"></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <article>
-        <figure></figure>
-        <figcaption>
-          <span>In Label</span>
-          <h3>Ini Adalah Judul Artikel</h3>
-          <span><strong>By</strong> Ridho Satriawan</span>
-        </figcaption>
-      </article>
-    </section>
-
-    <section>
-      <header>
-        <h2>Postingan Terbaru</h2>
-        <a href="#">Lebih Banyak</a>
-      </header>
-      <main>
+  <main class="blog__content">
+    <div class="blog__container">
+      <section class="content__card--big">
         <article>
           <figure></figure>
           <figcaption>
@@ -46,44 +33,67 @@
             <h3>Ini Adalah Judul Artikel</h3>
             <span><strong>By</strong> Ridho Satriawan</span>
           </figcaption>
-          <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
-          <time datetime="2022-08-22">22 Agustus 2022</time>
         </article>
-      </main>
-    </section>
-
-    <aside>
-      <header><h2>Paling Populer</h2></header>
-      <main>
-        <article>
-          <figure></figure>
-          <figcaption>
-            <h3>Ini Adalah Judul Artikel</h3>
+      </section>
+  
+      <section class="content__all-posts">
+        <header class="content__section-header--link">
+          <h2>Postingan Terbaru</h2>
+          <a href="#">Lebih Banyak</a>
+        </header>
+        <main>
+          <article class="content__card--medium">
+            <figure></figure>
+            <figcaption>
+              <span>In Label</span>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <span><strong>By</strong> Ridho Satriawan</span>
+            </figcaption>
+            <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
             <time datetime="2022-08-22">22 Agustus 2022</time>
-          </figcaption>
-        </article>
-      </main>
-    </aside>
-
-    <aside>
-      <header><h2>Kategori</h2></header>
-      <main>
-        <ol>
-          <li>
-            <span>Label 1</span>
-            <span>(1)</span>
-          </li>
-          <li>
-            <span>Label 2</span>
-            <span>(2)</span>
-          </li>
-        </ol>
-      </main>
-    </aside>
+          </article>
+        </main>
+      </section>
+  
+      <aside class="content__popular-posts">
+        <header class="content__section-header">
+          <h2>Paling Populer</h2>
+        </header>
+        <main>
+          <article class="content__card--small">
+            <figure></figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+        </main>
+      </aside>
+  
+      <aside class="content__categories">
+        <header class="content__section-header">
+          <h2>Kategori</h2>
+        </header>
+        <main>
+          <ol>
+            <li>
+              <span>Label 1</span>
+              <span>(1)</span>
+            </li>
+            <li>
+              <span>Label 2</span>
+              <span>(2)</span>
+            </li>
+          </ol>
+        </main>
+      </aside>
+    </div>
   </main>
 
-  <footer>
-    <span>Copyright@KangTutor</span>
+  <footer class="blog-footer">
+    <div class="container">
+      <span>Copyright@KangTutor</span>
+    </div>
   </footer>
 </body>
 </html>
