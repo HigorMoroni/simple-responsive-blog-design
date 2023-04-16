@@ -16,46 +16,98 @@
   <header class="blog__header">
     <div class="blog__container">
       <nav class="header__navbar">
-        <h1>Kang Tutor</h1>
-        <ul>
-          <li>Beranda</li>
-          <li>Tutorial</li>
-          <li>Pemrograman</li>
-          <li>Teknologi</li>
-          <li><img src="images/icons/search.svg" alt="Search"></li>
+        <h1><a href="#" class="navbar__logo">Kang Tutor</a></h1>
+        <ul class="navbar__links">
+          <li class="active"><a href="#" class="navbar__link">Beranda</a></li>
+          <li><a href="#" class="navbar__link">Tutorial</a></li>
+          <li><a href="#" class="navbar__link">Pemrograman</a></li>
+          <li><a href="#" class="navbar__link">Teknologi</a></li>
+          <li class="navbar__link">
+            <form class="navbar__search-bar">
+              <input class="search-bar__input" type="text" placeholder="Cari Artikel atau Kategori">
+              <button class="search-bar__button">
+                <img class="search-bar__icon" src="images/icons/search.svg" />
+              </button>
+            </form>
+            <img class="navbar__search-icon" src="images/icons/search-white.svg" />
+          </li>
         </ul>
+        <img class="navbar__burger-icon" src="images/icons/burger.svg" alt="Menu" />
       </nav>
     </div>
   </header>
 
   <main class="blog__content">
     <div class="blog__container">
-      <section class="content__card--big">
-        <article>
-          <figure></figure>
-          <figcaption>
-            <span>In Label</span>
-            <h3>Ini Adalah Judul Artikel</h3>
-            <span><strong>By</strong> Ridho Satriawan</span>
-          </figcaption>
-        </article>
-      </section>
-  
-      <section class="content__all-posts">
-        <header class="content__section-header--link">
-          <h2>Postingan Terbaru</h2>
-          <a href="#">Lebih Banyak</a>
-        </header>
-        <main>
-          <article class="content__card--medium">
-            <figure></figure>
-            <figcaption>
+      <section class="content__last-post">
+        <article class="content__card content__card--big">
+          <figure>
+            <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            <figcaption class="card__label">
               <span>In Label</span>
               <h3>Ini Adalah Judul Artikel</h3>
               <span><strong>By</strong> Ridho Satriawan</span>
             </figcaption>
-            <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
-            <time datetime="2022-08-22">22 Agustus 2022</time>
+          </figure>
+        </article>
+      </section>
+  
+      <section class="content__all-posts">
+        <header class="content__section-header content__section-header--link">
+          <h2>Postingan Terbaru</h2>
+          <a href="#">Lebih Banyak</a>
+        </header>
+        <main class="all-posts__posts">
+          <article class="content__card content__card--medium">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption class="card__label">
+              <span class="card__category">In Label</span>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <span class="card__author"><strong>By</strong> Ridho Satriawan</span>
+              <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--medium">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption class="card__label">
+              <span class="card__category">In Label</span>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <span class="card__author"><strong>By</strong> Ridho Satriawan</span>
+              <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--medium">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption class="card__label">
+              <span class="card__category">In Label</span>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <span class="card__author"><strong>By</strong> Ridho Satriawan</span>
+              <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--medium">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption class="card__label">
+              <span class="card__category">In Label</span>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <span class="card__author"><strong>By</strong> Ridho Satriawan</span>
+              <p>Apa itu HTML ? Buat kamu yang pernah membuat sebuah website pastinya sudah tidak asing lagi dengan yang namanya HTML. S...</p>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
           </article>
         </main>
       </section>
@@ -64,9 +116,41 @@
         <header class="content__section-header">
           <h2>Paling Populer</h2>
         </header>
-        <main>
-          <article class="content__card--small">
-            <figure></figure>
+        <main class="popular-posts__posts">
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
             <figcaption>
               <h3>Ini Adalah Judul Artikel</h3>
               <time datetime="2022-08-22">22 Agustus 2022</time>
@@ -80,13 +164,13 @@
           <h2>Kategori</h2>
         </header>
         <main>
-          <ol>
-            <li>
-              <span>Label 1</span>
+          <ol class="categories__list">
+            <li class="list__item">
+              <label>Label 1</label>
               <span>(1)</span>
             </li>
-            <li>
-              <span>Label 2</span>
+            <li class="list__item">
+              <label>Label 2</label>
               <span>(2)</span>
             </li>
           </ol>
