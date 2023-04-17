@@ -267,6 +267,95 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
 }
+
+/* Terceira Etapa - Menu Mobile */ 
+
+.mobile__menu .header__navbar {
+  background-color: var(--primary-color);
+  position: fixed;
+  height: 100%;
+  /* width: 100%; */
+  width: calc(100% - 30px);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 20px 15px 60px;
+}
+
+.mobile__menu .navbar__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile__menu .navbar__links li {
+  width: 100%;
+  height: fit-content;
+  padding-inline: 0;
+}
+
+.mobile__menu .navbar__logo, 
+.mobile__menu .navbar__search-icon, 
+.mobile__menu .navbar__burger-icon {
+  display: none;
+}
+
+.mobile__menu .navbar__close-icon {
+  display: block;
+}
+
+.mobile__menu .navbar__close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile__menu .navbar__search-bar {
+  width: 100%;
+  display: flex;
+}
+
+.mobile__menu .navbar__search,
+.mobile__menu .navbar__close {
+  order: -1;
+}
+
+.mobile__menu .content__popular-posts {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: fixed;
+  bottom: 60px;
+  width: calc(100% - 40px);
+}
+
+.mobile__menu .navbar__link,
+.mobile__menu .content__section-header h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mobile__menu .content__section-header {
+  justify-content: flex-start;
+}
+
+.mobile__menu .navbar__links,
+.mobile__menu .content__popular-posts {
+  max-width: 500px;
+}
+
+.mobile__menu .blog__container,
+.mobile__menu .header__navbar {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
   .blog__container {
     padding-inline: 40px;
@@ -310,6 +399,17 @@ h1, h2, h3 {
   
   .all-posts__posts {
     grid-template-columns: repeat(2, 1fr)
+  }
+
+  /* Terceira Etapa - Menu Mobile */ 
+
+  .mobile__menu .content__section-header {
+    padding-inline: 0;
+  }
+
+  .mobile__menu .navbar__link,
+  .mobile__menu .content__section-header h2 {
+    font-size: 2.25rem;
   }
 }
 
