@@ -26,7 +26,14 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.navbar__links {
+.navbar__logo {
+  font-size: 2rem;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+.navbar__links,
+.navbar__close-icon {
   display: none;
 }
 
@@ -148,6 +155,118 @@ h1, h2, h3 {
   align-items: center;
 }
 
+.content__card,
+.navbar__burger-icon,
+.categories__list .list__item label {
+  cursor: pointer;
+}
+
+/* Segunda Etapa - Novas Sections */
+
+.navbar__links {
+  list-style: none;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.navbar__links li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.navbar__link {
+  font-weight: 600;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+.content__card--small {
+  box-shadow: var(--card-shadow);
+  background-color: var(--contrast-color);
+  border-radius: var(--large-radio-border);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.content__card--small figure {
+  width: 115px;
+  height: 54px;
+  padding: 0px;
+}
+
+.content__card--small h3 {
+  font-size: 0.875rem;
+}
+
+.content__card--small time {
+  font-size: 0.75rem;
+}
+
+.popular-posts__posts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.content__card--small:last-child {
+  display: none;
+}
+
+.categories__list {
+  /* list-style: "> "; */
+  padding: 0;
+  font-weight: 600;
+}
+
+.categories__list .list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories__list .list__item label::before {
+  content: "> ";
+}
+
+.navbar__search-bar {
+  /* display: flex; */
+  display: none;
+  width: 320px;
+  position: relative;
+}
+
+.search-bar__input {
+  width: 100%;
+  background-color: var(--placeholder-color);
+  border: none;
+  outline: none;
+  padding-inline: 10px;
+  height: 46px;
+  border-radius: var(--large-radio-border) 0 0 var(--large-radio-border);
+  color: var(--text-highlight-color);
+}
+
+.search-bar__input:focus {
+  color: var(--secondary-color);
+}
+
+.search-bar__button {
+  height: 48px;
+  width: 40px;
+  background-color: var(--placeholder-color);
+  padding-inline: 10px;
+  border-radius: 0 var(--large-radio-border) var(--large-radio-border) 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
 @media screen and (min-width: 768px) {
   .blog__container {
     padding-inline: 40px;
@@ -170,8 +289,6 @@ h1, h2, h3 {
 
   .navbar__logo {
     font-size: 2.25rem;
-    color: var(--contrast-color);
-    text-decoration: none;
   }
 
   .content__card--big .card__label {
@@ -223,25 +340,21 @@ h1, h2, h3 {
       "ap ct"
   }
 
-  .navbar__logo {
-    font-size: 2.25rem;
+  .navbar__burger-icon {
+    display: none;
   }
 
   .navbar__links {
     display: flex;
-    list-style: none;
-    align-items: center;
-    height: 100%;
-    padding: 0;
   }
 
-  .navbar__links li {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-inline: 10px;
-    cursor: pointer;
-    transition: all .4s;
+  .blog__content {
+    padding-block: 26px;
+  }
+
+  .content__last-post,
+  .content__section-header {
+    margin-bottom: 24px;
   }
 
   .navbar__links li.active,
@@ -255,113 +368,8 @@ h1, h2, h3 {
     color: var(--secondary-color);
   }
 
-  .navbar__link {
-    font-weight: 600;
-    color: var(--contrast-color);
-    text-decoration: none;
-  }
-
-  .navbar__burger-icon {
-    display: none;
-  }
-
-  .blog__content {
-    padding-block: 26px;
-  }
-
-  .content__last-post,
-  .content__section-header {
-    margin-bottom: 24px;
-  }
-
-  .content__card--small {
-    box-shadow: var(--card-shadow);
-    border-radius: var(--large-radio-border);
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .content__card--small figure {
-    width: 115px;
-    height: 54px;
-    padding: 0px;
-  }
-
-  .content__card--small h3 {
-    font-size: 0.875rem;
-  }
-
-  .content__card--small time {
-    font-size: 0.75rem;
-  }
-
-  .popular-posts__posts {
-    display: flex;
-    flex-direction: column;
-    gap: 16px
-  }
-
-  .content__card--small:last-child {
-    display: none;
-  }
-  
-  .categories__list {
-    /* list-style: "> "; */
-    padding: 0;
-    font-weight: 600;
-  }
-
-  .categories__list .list__item {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .categories__list .list__item label::before {
-    content: "> ";
-  }
-
   .navbar__search-icon {
     display: block;
-    cursor: pointer;
-  }
-
-  .navbar__search-bar {
-    width: 320px;
-    position: relative;
-    display: none;
-  }
-
-  .search-bar__input {
-    width: 100%;
-    background-color: var(--placeholder-color);
-    border: none;
-    outline: none;
-    padding-inline: 10px;
-    height: 46px;
-    border-radius: var(--large-radio-border) 0 0 var(--large-radio-border);
-    color: var(--text-highlight-color);
-  }
-
-  .search-bar__input:focus {
-    color: var(--secondary-color);
-  }
-
-  .search-bar__button {
-    height: 48px;
-    width: 40px;
-    background-color: var(--placeholder-color);
-    padding-inline: 10px;
-    border-radius: 0 var(--large-radio-border) var(--large-radio-border) 0;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-  }
-
-  .content__card,
-  .categories__list .list__item label {
     cursor: pointer;
   }
 }
