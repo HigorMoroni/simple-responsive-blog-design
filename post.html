@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/post.css">
+  <title>Simple Responsive Blog Design</title>
+</head>
+
+<body>
+  <header class="blog__header">
+    <div class="blog__container">
+      <nav class="header__navbar">
+        <h1><a href="index.html" class="navbar__logo">Kang Tutor</a></h1>
+        <ul class="navbar__links">
+          <li class="active"><a href="#" class="navbar__link">Beranda</a></li>
+          <li><a href="#" class="navbar__link">Tutorial</a></li>
+          <li><a href="#" class="navbar__link">Pemrograman</a></li>
+          <li><a href="#" class="navbar__link">Teknologi</a></li>
+          <li class="navbar__close"><img class="navbar__close-icon" src="images/icons/close.svg" /></li>
+          <li class="navbar__search">
+            <form class="navbar__search-bar">
+              <input class="search-bar__input" type="text" placeholder="Cari Artikel atau Kategori">
+              <button class="search-bar__button">
+                <img class="search-bar__icon" src="images/icons/search.svg" />
+              </button>
+            </form>
+            <img class="navbar__search-icon" src="images/icons/search-white.svg" />
+          </li>
+        </ul>
+        <img class="navbar__burger-icon" src="images/icons/burger.svg" alt="Menu" />
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog__content">
+    <div class="blog__container">
+      <section class="content__main-post">
+        <header class="content__section-header">
+          <h2>Home > html > Apa Itu HTML ?</h2>
+        </header>
+        <article class="main-post__post">
+          <h1 class="post__title">Ini Adalah Judul Artikel</h1>
+          <figure>
+            <img class="post__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+          </figure>
+          <div class="post__subtitle">
+            <span class="post__author"><strong>By</strong> Ridho Satriawan</span>
+            <time datetime="2022-08-22">22 Agustus 2022</time>
+          </div>
+
+          <p class="post__content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quas perspiciatis nemo eligendi incidunt deleniti alias, vero corrupti vitae neque eum sequi commodi dignissimos, dolore modi voluptatem, quia unde? Deleniti!
+            Iste unde animi numquam dolorum aut! Ducimus sunt soluta iusto qui, dolore magnam provident neque voluptas nesciunt officiis atque tenetur sequi officia eveniet inventore nobis illum temporibus, voluptate ad ipsa.
+            Maiores culpa ad suscipit doloribus, temporibus nemo praesentium dignissimos ex possimus blanditiis nostrum consequatur iure. Porro, fuga repellat magnam sapiente quia nemo nulla perferendis, tenetur placeat ipsam, accusamus quae quasi.
+            Similique, fugit! Numquam, harum dicta consequuntur rem earum cum repellat maxime illo delectus molestias dolorem deleniti eaque? Saepe a, quaerat dolorum laboriosam consequuntur laudantium voluptatibus dolores accusamus voluptate, eveniet eius!
+            Labore architecto consequatur est a deleniti? Itaque repellat sit rem architecto corrupti at sint voluptate reiciendis molestias dolore voluptatum quod ipsum sapiente amet quos, quas atque enim consequatur deleniti illum.
+          </p>
+        </article>
+      </section>
+  
+      <aside class="content__popular-posts">
+        <header class="content__section-header">
+          <h2>Paling Populer</h2>
+        </header>
+        <main class="popular-posts__posts">
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+
+          <article class="content__card content__card--small">
+            <figure>
+              <img class="card__image" src="images/travel.jpg" alt="Ini Adalah Judul Artikel" />
+            </figure>
+            <figcaption>
+              <h3>Ini Adalah Judul Artikel</h3>
+              <time datetime="2022-08-22">22 Agustus 2022</time>
+            </figcaption>
+          </article>
+        </main>
+      </aside>
+  
+      <aside class="content__categories">
+        <header class="content__section-header">
+          <h2>Kategori</h2>
+        </header>
+        <main>
+          <ol class="categories__list">
+            <li class="list__item">
+              <label>Label 1</label>
+              <span>(1)</span>
+            </li>
+            <li class="list__item">
+              <label>Label 2</label>
+              <span>(2)</span>
+            </li>
+          </ol>
+        </main>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="blog__footer">
+    <div class="blog__container">
+      <span>Copyright@KangTutor</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
