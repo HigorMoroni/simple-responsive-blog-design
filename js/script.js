@@ -108,6 +108,27 @@ async function createPostCard(card, content) {
   }
 }
 
+/**
+ * Essa função cria um spinner de carregamento
+ */
+function createLoader() {
+  const wrapper = document.createElement('div');
+  const loader = document.createElement('div');
+
+  wrapper.className = 'loading-wrapper'
+  loader.className = 'loading';
+
+  wrapper.appendChild(loader);
+  elements.body.appendChild(wrapper);
+}
+
+/**
+ * Essa função deleta o spinner de carregamento
+ */
+function removeLoader() {
+  const loader = document.querySelector('.loading-wrapper');
+  loader.remove();
+}
 function watchResize() {
   if (innerWidth >= 1024) toggleMobileMenu(false);
 };
